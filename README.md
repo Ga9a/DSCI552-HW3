@@ -25,3 +25,14 @@ without imputation. Original input files are preserved.
 
 Part 4 of the homework PDF is assigned to HW4; the optional practice questions are
 not included. Sources and AI assistance are disclosed in the notebook.
+
+## Reproducibility checks
+
+Use Python 3.12 with the pinned dependencies. The submitted notebook preserves its recorded analysis; the verification script checks notebook structure and saved errors without changing it.
+
+```sh
+python scripts/verify_notebook.py
+python scripts/verify_notebook.py --execute
+```
+
+Execution uses the notebook directory as its working directory, so dataset paths resolve consistently. Run the command in the environment where the requirements were installed. CI reruns all code cells on a clean checkout. Generated results written by notebook code may be refreshed during execution.
